@@ -46,7 +46,7 @@ public class TokenDataHelper {
           {TokenEnum.id, TokenEnum.tokenBalance}
         };
 
-      case "getTokensByThreeParams":
+      case "getTokensByThreeParamsTest":
         return new Object[][] {
           {
             TokenEnum.id, TokenEnum.chainId, TokenEnum.name,
@@ -65,7 +65,7 @@ public class TokenDataHelper {
           {TokenEnum.id, TokenEnum.chainId, TokenEnum.tokenBalance}
         };
 
-      case "getTokensByFourParams":
+      case "getTokensByFourParamsTest":
         return new Object[][] {
           {TokenEnum.id, TokenEnum.chainId, TokenEnum.name, TokenEnum.symbol},
           {TokenEnum.id, TokenEnum.chainId, TokenEnum.name, TokenEnum.type},
@@ -83,7 +83,7 @@ public class TokenDataHelper {
           {TokenEnum.id, TokenEnum.chainId, TokenEnum.name, TokenEnum.tokenBalance}
         };
 
-      case "getTokensByFiveParams":
+      case "getTokensByFiveParamsTest":
         return new Object[][] {
           {TokenEnum.id, TokenEnum.chainId, TokenEnum.name, TokenEnum.symbol, TokenEnum.type},
           {
@@ -138,7 +138,7 @@ public class TokenDataHelper {
           }
         };
 
-      case "getTokensBySixParams":
+      case "getTokensBySixParamsTest":
         return new Object[][] {
           {
             TokenEnum.id,
@@ -222,7 +222,7 @@ public class TokenDataHelper {
           }
         };
 
-      case "getTokensBySevenParams":
+      case "getTokensBySevenParamsTest":
         return new Object[][] {
           {
             TokenEnum.id,
@@ -307,7 +307,7 @@ public class TokenDataHelper {
           }
         };
 
-      case "getTokensByEightParams":
+      case "getTokensByEightParamsTest":
         return new Object[][] {
           {
             TokenEnum.id,
@@ -391,7 +391,7 @@ public class TokenDataHelper {
           }
         };
 
-      case "getTokensByNineParams":
+      case "getTokensByNineParamsTest":
         return new Object[][] {
           {
             TokenEnum.id,
@@ -472,7 +472,7 @@ public class TokenDataHelper {
           }
         };
 
-      case "getTokensByTenParams":
+      case "getTokensByTenParamsTest":
         return new Object[][] {
           {
             TokenEnum.id,
@@ -548,7 +548,7 @@ public class TokenDataHelper {
           }
         };
 
-      case "getTokensByElevenParams":
+      case "getTokensByElevenParamsTest":
         return new Object[][] {
           {
             TokenEnum.id,
@@ -617,7 +617,7 @@ public class TokenDataHelper {
           }
         };
 
-      case "getTokensByTwelveParams":
+      case "getTokensByTwelveParamsTest":
         return new Object[][] {
           {
             TokenEnum.id,
@@ -677,7 +677,7 @@ public class TokenDataHelper {
           }
         };
 
-      case "getTokensByThirteenParams":
+      case "getTokensByThirteenParamsTest":
         return new Object[][] {
           {
             TokenEnum.id,
@@ -726,7 +726,7 @@ public class TokenDataHelper {
           }
         };
 
-      case "getTokensByFourteenParams":
+      case "getTokensByFourteenParamsTest":
         return new Object[][] {
           {
             TokenEnum.id,
@@ -762,7 +762,7 @@ public class TokenDataHelper {
           }
         };
 
-      case "getTokensByFifteenParams":
+      case "getTokensByFifteenParamsTest":
         return new Object[][] {
           {
             TokenEnum.id,
