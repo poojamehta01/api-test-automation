@@ -20,9 +20,9 @@ import pojo.TokenErrorResponse;
 import pojo.TokenErrorResponse.Error;
 import utilities.APIService;
 
-public class GetTokenByQueryParamsTestNegative {
+public class GetTokenByQueryParamsNegativeTest {
   private static final Logger log =
-      LogManager.getLogger(GetTokensByQueryParamsTestPositive.class.getName());
+      LogManager.getLogger(GetTokensByQueryParamsPositiveTest.class.getName());
 
   @Test(
       description = "No parameter",
