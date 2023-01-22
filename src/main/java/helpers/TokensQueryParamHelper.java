@@ -24,7 +24,7 @@ import pojo.TokenRequests.Input;
 import pojo.TokenRequests.QueryVariables;
 import pojo.TokenResponse.Token;
 
-public class TokensHelper {
+public class TokensQueryParamHelper {
 
   private static TokenRequests tokenRequests;
   private static QueryVariables queryVariables;
@@ -54,57 +54,56 @@ public class TokensHelper {
     return tokenRequests;
   }
 
-  public static void assertToken(Token field, TokenEnum tokenEnumParam) {
+  public static void assertToken(Token field, TokenEnum tokenEnum) {
     SoftAssert softAssert = new SoftAssert();
-    switch (tokenEnumParam) {
-      case ID:
+    switch (tokenEnum) {
+      case ID_ENUM:
         softAssert.assertNotNull(field.getId());
-
         break;
-      case CHAIN_ID:
+      case CHAIN_ID_ENUM:
         softAssert.assertNotNull(field.getChainId());
         break;
-      case NAME:
+      case NAME_ENUM:
         softAssert.assertNotNull(field.getName());
         break;
-      case SYMBOL:
+      case SYMBOL_ENUM:
         softAssert.assertNotNull(field.getSymbol());
         break;
-      case TYPE:
+      case TYPE_ENUM:
         softAssert.assertNotNull(field.getType());
         break;
-      case TOTAL_SUPPLY:
+      case TOTAL_SUPPLY_ENUM:
         softAssert.assertNotNull(field.getTotalSupply());
         break;
-      case DECIMALS:
+      case DECIMALS_ENUM:
         softAssert.assertNotNull(field.getDecimals());
         break;
-      case BASE_URI:
+      case BASE_URI_ENUM:
         softAssert.assertNotNull(field.getBaseURI());
         break;
-      case LAST_TRANSFER_TIMESTAMP:
+      case LAST_TRANSFER_TIMESTAMP_ENUM:
         softAssert.assertNotNull(field.getLastTransferTimestamp());
-        String.valueOf(field.getLastTransferTimestamp());
         break;
-      case LAST_TRANSFER_BLOCK:
+      case LAST_TRANSFER_BLOCK_ENUM:
         softAssert.assertNotNull(field.getLastTransferBlock());
         break;
-      case LAST_TRANSFER_HASH:
+      case LAST_TRANSFER_HASH_ENUM:
         softAssert.assertNotNull(field.getLastTransferHash());
         break;
-      case CURRENT_HOLDER_COUNT:
+      case CURRENT_HOLDER_COUNT_ENUM:
         softAssert.assertNotNull(field.getCurrentHolderCount());
         break;
-      case TRANSFER_COUNT:
+      case TRANSFER_COUNT_ENUM:
         softAssert.assertNotNull(field.getTransferCount());
         break;
-      case TOKEN_TRAITS:
+      case TOKEN_TRAITS_ENUM:
         softAssert.assertNull(field.getTokenTraits());
         break;
-      case TOKEN_BALANCE:
+      case TOKEN_BALANCE_ENUM:
         softAssert.assertNull(field.getTokenBalance());
         break;
     }
+
     softAssert.assertAll();
   }
 
