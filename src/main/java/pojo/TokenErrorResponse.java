@@ -1,5 +1,6 @@
 package pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.ArrayList;
 import lombok.Data;
 
@@ -9,10 +10,12 @@ public class TokenErrorResponse {
   public Object data;
 
   @Data
+  @JsonIgnoreProperties
   public static class Error {
     public String message;
     public ArrayList<Location> locations;
     public Extensions extensions;
+    public ArrayList<String> path;
   }
 
   @Data
