@@ -10,7 +10,7 @@ import pojo.TokenRequests;
 public class APIService {
   static String baseURI = "https://devapi.airstack.xyz/gql";
 
-  public static Response sendAPIRequest(TokenRequests tokenRequests) {
+  public static Response sendAPIRequest(TokenRequests tokenRequests, int statusCode) {
 
     Response response =
         given()
@@ -24,7 +24,7 @@ public class APIService {
             .log()
             .all()
             .assertThat()
-            .statusCode(200)
+            .statusCode(statusCode)
             .and()
             .contentType(ContentType.JSON)
             .extract()

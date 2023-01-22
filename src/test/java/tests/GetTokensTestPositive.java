@@ -1,7 +1,5 @@
 package tests;
 
-import static constants.TokenResponseConstanta.ID;
-
 import enums.TokenEnum;
 import helpers.TokenPositiveDataHelper;
 import helpers.TokensHelper;
@@ -26,7 +24,7 @@ public class GetTokensTestPositive {
       dataProvider = "token_dataProvider",
       dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByOneParamTest(TokenEnum tokenEnum1) {
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnum1.getValue()));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnum1.getValue()), 200);
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -34,8 +32,8 @@ public class GetTokensTestPositive {
     softAssert.assertNotNull(response.data.getTokens());
     for (Token field : response.getData().getTokens().getTokens()) {
       TokensHelper.assertToken(field, tokenEnum1);
-      softAssert.assertAll();
     }
+    softAssert.assertAll();
   }
 
   @Test(
@@ -44,7 +42,7 @@ public class GetTokensTestPositive {
       dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByTwoParamsTest(TokenEnum tokenEnum1, TokenEnum tokenEnum2) {
     String tokenEnumNew = tokenEnum1.getValue() + tokenEnum2.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -65,7 +63,7 @@ public class GetTokensTestPositive {
   public void getTokensByThreeParamsTest(
       TokenEnum tokenEnum1, TokenEnum tokenEnum2, TokenEnum tokenEnum3) {
     String tokenEnumNew = tokenEnum1.getValue() + tokenEnum2.getValue() + tokenEnum3.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -91,7 +89,7 @@ public class GetTokensTestPositive {
             + tokenEnum2.getValue()
             + tokenEnum3.getValue()
             + tokenEnum4.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -123,7 +121,7 @@ public class GetTokensTestPositive {
             + tokenEnum3.getValue()
             + tokenEnum4.getValue()
             + tokenEnum5.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -158,7 +156,7 @@ public class GetTokensTestPositive {
             + tokenEnum4.getValue()
             + tokenEnum5.getValue()
             + tokenEnum6.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -196,7 +194,7 @@ public class GetTokensTestPositive {
             + tokenEnum5.getValue()
             + tokenEnum6.getValue()
             + tokenEnum7.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -237,7 +235,7 @@ public class GetTokensTestPositive {
             + tokenEnum6.getValue()
             + tokenEnum7.getValue()
             + tokenEnum8.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -281,7 +279,7 @@ public class GetTokensTestPositive {
             + tokenEnum7.getValue()
             + tokenEnum8.getValue()
             + tokenEnum9.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -328,7 +326,7 @@ public class GetTokensTestPositive {
             + tokenEnum8.getValue()
             + tokenEnum9.getValue()
             + tokenEnum10.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
 
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
@@ -379,7 +377,7 @@ public class GetTokensTestPositive {
             + tokenEnum9.getValue()
             + tokenEnum10.getValue()
             + tokenEnum11.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
 
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
@@ -433,7 +431,7 @@ public class GetTokensTestPositive {
             + tokenEnum10.getValue()
             + tokenEnum11.getValue()
             + tokenEnum12.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
 
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
@@ -490,7 +488,7 @@ public class GetTokensTestPositive {
             + tokenEnum11.getValue()
             + tokenEnum12.getValue()
             + tokenEnum13.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
 
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
@@ -550,7 +548,7 @@ public class GetTokensTestPositive {
             + tokenEnum12.getValue()
             + tokenEnum13.getValue()
             + tokenEnum14.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
 
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
@@ -613,7 +611,7 @@ public class GetTokensTestPositive {
             + tokenEnum13.getValue()
             + tokenEnum14.getValue()
             + tokenEnum15.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)), 200);
 
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
