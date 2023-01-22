@@ -1,14 +1,14 @@
 package tests;
 
-import static constants.TokenResponseConstants.INCORRECT_CONTENT_TYPE_ERROR_MSG;
-import static constants.TokenResponseConstants.INCORRECT_CONTENT_TYPE_ERROR_STATUS_LINE;
-import static constants.TokenResponseConstants.INCORRECT_HTTP_METHOD_ERROR_STATUS_LINE;
-import static constants.TokenResponseConstants.baseURI;
+import static constants.TokenErrorConstants.INCORRECT_CONTENT_TYPE_ERROR_MSG;
+import static constants.TokenErrorConstants.INCORRECT_CONTENT_TYPE_ERROR_STATUS_LINE;
+import static constants.TokenErrorConstants.INCORRECT_HTTP_METHOD_ERROR_STATUS_LINE;
+import static constants.TokenRequestConstants.baseURI;
 import static io.restassured.RestAssured.given;
 
 import enums.TokenErrorResponseEnums;
-import helpers.TokenNegativeDataHelper;
-import helpers.TokensQueryParamHelper;
+import helpers.TokenQueryParamNegativeDataHelper;
+import helpers.TokensCommonHelper;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -20,17 +20,18 @@ import pojo.TokenErrorResponse;
 import pojo.TokenErrorResponse.Error;
 import utilities.APIService;
 
-public class GetTokenTestNegative {
+public class GetTokenByQueryParamsTestNegative {
   private static final Logger log =
       LogManager.getLogger(GetTokensByQueryParamsTestPositive.class.getName());
 
   @Test(
       description = "No parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenNegativeDataHelper.class)
+      dataProviderClass = TokenQueryParamNegativeDataHelper.class)
   public void getTokensByIncorrectParamTest(
       String tokenEnum1, TokenErrorResponseEnums tokenErrorResponseEnums) {
-    Response res = APIService.sendAPIRequest(TokensQueryParamHelper.getTokens(tokenEnum1), 422);
+    Response res =
+        APIService.sendAPIRequest(TokensCommonHelper.getTokensByQueryParam(tokenEnum1), 422);
     log.info("The status code is: " + res.getStatusCode());
     TokenErrorResponse response = res.as(TokenErrorResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -47,8 +48,8 @@ public class GetTokenTestNegative {
   @Test(
       description = "InCorrect Http Method",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenNegativeDataHelper.class)
-  public void getTokensByIncorrectHttpMethod(TokenErrorResponseEnums tokenErrorResponseEnums) {
+      dataProviderClass = TokenQueryParamNegativeDataHelper.class)
+  public void getTokensByIncorrectHttpMethod() {
     Response response =
         given()
             .log()
@@ -74,7 +75,7 @@ public class GetTokenTestNegative {
   @Test(
       description = "InCorrect Content Type",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenNegativeDataHelper.class)
+      dataProviderClass = TokenQueryParamNegativeDataHelper.class)
   public void getTokensByIncorrectContentType(ContentType contentType) {
     Response response =
         given()

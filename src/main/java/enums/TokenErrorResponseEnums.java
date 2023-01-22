@@ -22,7 +22,9 @@ public enum TokenErrorResponseEnums {
       "Expected Name, found Int", "GRAPHQL_PARSE_FAILED", null, 422),
 
   GET_TOKEN_QUERY_INVALID_NOT_PRESENT_FIELD_STRING(
-      "Expected Name, found String", "GRAPHQL_PARSE_FAILED", null, 422);
+      "Expected Name, found String", "GRAPHQL_PARSE_FAILED", null, 422),
+
+  CHAIN_ID_NULL("cannot be null", "GRAPHQL_VALIDATION_FAILED", null, 422);
 
   @Getter private final String message;
   @Getter private final String code;
