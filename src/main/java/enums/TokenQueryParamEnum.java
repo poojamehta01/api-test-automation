@@ -2,9 +2,10 @@ package enums;
 
 import lombok.Getter;
 
-public enum TokenEnum {
+public enum TokenQueryParamEnum {
   ID_ENUM("id\n"),
   CHAIN_ID_ENUM("chainId\n"),
+  ADDRESS_ENUM("address\n"),
   NAME_ENUM("name\n"),
   SYMBOL_ENUM("symbol\n"),
   TYPE_ENUM("type\n"),
@@ -21,7 +22,7 @@ public enum TokenEnum {
 
   @Getter private final String value;
 
-  TokenEnum(String value) {
+  TokenQueryParamEnum(String value) {
 
     this.value = value;
   }
