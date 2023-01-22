@@ -33,8 +33,9 @@ public class TokenRequests {
   @Builder
   public static class Filter {
     private String chainId;
-    //    private String type;
-    //    private String address;
-    //    private String name;
+    private String type;
+    // private String address;
+    private String name;
+    private String symbol;
   }
 }

@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 
 import enums.TokenErrorResponseEnums;
 import helpers.TokenNegativeDataHelper;
-import helpers.TokensHelper;
+import helpers.TokensQueryParamHelper;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -18,12 +18,11 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pojo.TokenErrorResponse;
 import pojo.TokenErrorResponse.Error;
-import pojo.TokenRequests;
 import utilities.APIService;
 
-
 public class GetTokenTestNegative {
-  private static final Logger log = LogManager.getLogger(GetTokensTestPositive.class.getName());
+  private static final Logger log =
+      LogManager.getLogger(GetTokensByQueryParamsTestPositive.class.getName());
 
   @Test(
       description = "No parameter",
@@ -31,7 +30,7 @@ public class GetTokenTestNegative {
       dataProviderClass = TokenNegativeDataHelper.class)
   public void getTokensByIncorrectParamTest(
       String tokenEnum1, TokenErrorResponseEnums tokenErrorResponseEnums) {
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnum1), 422);
+    Response res = APIService.sendAPIRequest(TokensQueryParamHelper.getTokens(tokenEnum1), 422);
     log.info("The status code is: " + res.getStatusCode());
     TokenErrorResponse response = res.as(TokenErrorResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -50,7 +49,7 @@ public class GetTokenTestNegative {
       dataProvider = "token_dataProvider",
       dataProviderClass = TokenNegativeDataHelper.class)
   public void getTokensByIncorrectHttpMethod(TokenErrorResponseEnums tokenErrorResponseEnums) {
-      Response response =
+    Response response =
         given()
             .log()
             .all()
@@ -67,9 +66,8 @@ public class GetTokenTestNegative {
             .response()
             .prettyPeek();
 
-
     SoftAssert softAssert = new SoftAssert();
-    softAssert.assertEquals(response.getStatusLine(),INCORRECT_HTTP_METHOD_ERROR_STATUS_LINE);
+    softAssert.assertEquals(response.getStatusLine(), INCORRECT_HTTP_METHOD_ERROR_STATUS_LINE);
     softAssert.assertAll();
   }
 
@@ -96,9 +94,9 @@ public class GetTokenTestNegative {
             .prettyPeek();
     TokenErrorResponse errorResponse = response.as(TokenErrorResponse.class);
     SoftAssert softAssert = new SoftAssert();
-    softAssert.assertEquals(response.getStatusLine(),INCORRECT_CONTENT_TYPE_ERROR_STATUS_LINE);
-    softAssert.assertEquals(errorResponse.errors.get(0).getMessage(),INCORRECT_CONTENT_TYPE_ERROR_MSG);
+    softAssert.assertEquals(response.getStatusLine(), INCORRECT_CONTENT_TYPE_ERROR_STATUS_LINE);
+    softAssert.assertEquals(
+        errorResponse.errors.get(0).getMessage(), INCORRECT_CONTENT_TYPE_ERROR_MSG);
     softAssert.assertAll();
   }
-
 }
