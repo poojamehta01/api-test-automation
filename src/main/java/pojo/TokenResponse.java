@@ -31,6 +31,7 @@ public class TokenResponse {
     public String id;
     public String chainId;
     public String name;
+    public String address;
     public String symbol;
     public String type;
     public String totalSupply;
