@@ -78,8 +78,6 @@ public class TokensCommonHelper {
             + " }";
 
     tokenRequests = TokenRequests.builder().query(query).variables(queryVariables).build();
-    System.out.println(tokenRequests);
-
     return tokenRequests;
   }
 
@@ -120,25 +118,17 @@ public class TokensCommonHelper {
             + "\n";
 
     tokenRequests = TokenRequests.builder().query(query).variables(queryVariables).build();
-    System.out.println(tokenRequests);
-
     return tokenRequests;
   }
 
   public static void assertToken(Token field, TokenQueryParamEnum tokenQueryParamEnum) {
     SoftAssert softAssert = new SoftAssert();
-    System.out.println("field");
-    System.out.println(field);
-    System.out.println("tokenQueryParamEnum");
-    System.out.println(tokenQueryParamEnum);
+
     if (ID_ENUM.equals(tokenQueryParamEnum)) {
-      System.out.println("id enum");
       softAssert.assertNotNull(field.getId());
     } else if (ADDRESS_ENUM.equals(tokenQueryParamEnum)) {
-      System.out.println("address enum");
       softAssert.assertNotNull(field.getAddress());
     } else if (CHAIN_ID_ENUM.equals(tokenQueryParamEnum)) {
-      System.out.println("chainid enum");
       softAssert.assertNotNull(field.getChainId());
     } else if (NAME_ENUM.equals(tokenQueryParamEnum)) {
       softAssert.assertNotNull(field.getName());
