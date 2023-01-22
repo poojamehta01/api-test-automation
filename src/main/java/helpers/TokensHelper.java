@@ -1,20 +1,20 @@
 package helpers;
 
-import static constants.TokenResponseConstanta.BASEURI;
-import static constants.TokenResponseConstanta.CHAINID;
-import static constants.TokenResponseConstanta.CURRENTACCOUNTHOLD;
-import static constants.TokenResponseConstanta.DECIMALS;
-import static constants.TokenResponseConstanta.ID;
-import static constants.TokenResponseConstanta.LASTRANSFERTIMESTAMP;
-import static constants.TokenResponseConstanta.LASTTRANSFERBLOCK;
-import static constants.TokenResponseConstanta.LASTTRANSFERHASH;
-import static constants.TokenResponseConstanta.NAME;
-import static constants.TokenResponseConstanta.SYMBOL;
-import static constants.TokenResponseConstanta.TOKENBALANCE;
-import static constants.TokenResponseConstanta.TOKENTRAITS;
-import static constants.TokenResponseConstanta.TOTALSUPPLY;
-import static constants.TokenResponseConstanta.TRANSFERCOUNT;
-import static constants.TokenResponseConstanta.TYPE;
+import static constants.TokenResponseConstants.BASEURI;
+import static constants.TokenResponseConstants.CHAINID;
+import static constants.TokenResponseConstants.CURRENTACCOUNTHOLD;
+import static constants.TokenResponseConstants.DECIMALS;
+import static constants.TokenResponseConstants.ID;
+import static constants.TokenResponseConstants.LASTRANSFERTIMESTAMP;
+import static constants.TokenResponseConstants.LASTTRANSFERBLOCK;
+import static constants.TokenResponseConstants.LASTTRANSFERHASH;
+import static constants.TokenResponseConstants.NAME;
+import static constants.TokenResponseConstants.SYMBOL;
+import static constants.TokenResponseConstants.TOKENBALANCE;
+import static constants.TokenResponseConstants.TOKENTRAITS;
+import static constants.TokenResponseConstants.TOTALSUPPLY;
+import static constants.TokenResponseConstants.TRANSFERCOUNT;
+import static constants.TokenResponseConstants.TYPE;
 
 import enums.TokenEnum;
 import org.testng.asserts.SoftAssert;
@@ -57,76 +57,73 @@ public class TokensHelper {
   public static void assertToken(Token field, TokenEnum tokenEnumParam) {
     SoftAssert softAssert = new SoftAssert();
     switch (tokenEnumParam) {
-      case id:
+      case ID:
         softAssert.assertNotNull(field.getId());
 
         break;
-      case chainId:
+      case CHAIN_ID:
         softAssert.assertNotNull(field.getChainId());
         break;
-      case name:
+      case NAME:
         softAssert.assertNotNull(field.getName());
         break;
-      case symbol:
+      case SYMBOL:
         softAssert.assertNotNull(field.getSymbol());
         break;
-      case type:
+      case TYPE:
         softAssert.assertNotNull(field.getType());
         break;
-      case totalSupply:
+      case TOTAL_SUPPLY:
         softAssert.assertNotNull(field.getTotalSupply());
         break;
-      case decimals:
+      case DECIMALS:
         softAssert.assertNotNull(field.getDecimals());
         break;
-      case baseURI:
+      case BASE_URI:
         softAssert.assertNotNull(field.getBaseURI());
         break;
-      case lastTransferTimestamp:
+      case LAST_TRANSFER_TIMESTAMP:
         softAssert.assertNotNull(field.getLastTransferTimestamp());
         String.valueOf(field.getLastTransferTimestamp());
         break;
-      case lastTransferBlock:
+      case LAST_TRANSFER_BLOCK:
         softAssert.assertNotNull(field.getLastTransferBlock());
         break;
-      case lastTransferHash:
+      case LAST_TRANSFER_HASH:
         softAssert.assertNotNull(field.getLastTransferHash());
         break;
-      case currentHolderCount:
+      case CURRENT_HOLDER_COUNT:
         softAssert.assertNotNull(field.getCurrentHolderCount());
         break;
-      case transferCount:
+      case TRANSFER_COUNT:
         softAssert.assertNotNull(field.getTransferCount());
         break;
-      case tokenTraits:
+      case TOKEN_TRAITS:
         softAssert.assertNull(field.getTokenTraits());
         break;
-      case tokenBalance:
+      case TOKEN_BALANCE:
         softAssert.assertNull(field.getTokenBalance());
         break;
     }
+    softAssert.assertAll();
   }
 
-  public static void assertTokenFieldValues(Token field){
+  public static void assertTokenFieldValues(Token field) {
     SoftAssert softAssert = new SoftAssert();
-    softAssert.assertEquals(field.getId(),ID);
-    softAssert.assertEquals(field.getChainId(),CHAINID);
-    softAssert.assertEquals(field.getName(),NAME);
-    softAssert.assertEquals(field.getSymbol(),SYMBOL);
-    softAssert.assertEquals(field.getType(),TYPE);
-    softAssert.assertEquals(field.getTotalSupply(),TOTALSUPPLY);
-    softAssert.assertEquals(field.getDecimals(),DECIMALS);
-    softAssert.assertEquals(field.getBaseURI(),BASEURI);
-    softAssert.assertEquals(field.getLastTransferTimestamp(),LASTRANSFERTIMESTAMP);
-    softAssert.assertEquals(field.getLastTransferBlock(),LASTTRANSFERBLOCK);
-    softAssert.assertEquals(field.getLastTransferHash(),LASTTRANSFERHASH);
-    softAssert.assertEquals(field.getCurrentHolderCount(),CURRENTACCOUNTHOLD);
-    softAssert.assertEquals(field.getTransferCount(),TRANSFERCOUNT);
-    softAssert.assertEquals(field.getTokenTraits(),TOKENTRAITS);
-    softAssert.assertEquals(field.getTokenBalance(),TOKENBALANCE);
-
-
-
-
+    softAssert.assertEquals(field.getId(), ID);
+    softAssert.assertEquals(field.getChainId(), CHAINID);
+    softAssert.assertEquals(field.getName(), NAME);
+    softAssert.assertEquals(field.getSymbol(), SYMBOL);
+    softAssert.assertEquals(field.getType(), TYPE);
+    softAssert.assertEquals(field.getTotalSupply(), TOTALSUPPLY);
+    softAssert.assertEquals(field.getDecimals(), DECIMALS);
+    softAssert.assertEquals(field.getBaseURI(), BASEURI);
+    softAssert.assertEquals(field.getLastTransferTimestamp(), LASTRANSFERTIMESTAMP);
+    softAssert.assertEquals(field.getLastTransferBlock(), LASTTRANSFERBLOCK);
+    softAssert.assertEquals(field.getLastTransferHash(), LASTTRANSFERHASH);
+    softAssert.assertEquals(field.getCurrentHolderCount(), CURRENTACCOUNTHOLD);
+    softAssert.assertEquals(field.getTransferCount(), TRANSFERCOUNT);
+    softAssert.assertEquals(field.getTokenTraits(), TOKENTRAITS);
+    softAssert.assertEquals(field.getTokenBalance(), TOKENBALANCE);
   }
 }

@@ -1,5 +1,6 @@
 package utilities;
 
+import static constants.TokenResponseConstants.baseURI;
 import static io.restassured.RestAssured.given;
 
 import io.qameta.allure.restassured.AllureRestAssured;
@@ -8,7 +9,7 @@ import io.restassured.response.Response;
 import pojo.TokenRequests;
 
 public class APIService {
-  static String baseURI = "https://devapi.airstack.xyz/gql";
+
 
   public static Response sendAPIRequest(TokenRequests tokenRequests, int statusCode) {
 
