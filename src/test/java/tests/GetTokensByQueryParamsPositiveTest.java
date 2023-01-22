@@ -18,9 +18,9 @@ import utilities.APIService;
 
 @Epic("Get Token")
 @Feature("Get Token based on input query parameters")
-public class GetTokensByQueryParamsTestPositive {
+public class GetTokensByQueryParamsPositiveTest {
   private static final Logger log =
-      LogManager.getLogger(GetTokensByQueryParamsTestPositive.class.getName());
+      LogManager.getLogger(GetTokensByQueryParamsPositiveTest.class.getName());
   private List<TokenQueryParamEnum> tokenQueryParamEnumList = new ArrayList<>();
 
   @Test(
@@ -38,13 +38,9 @@ public class GetTokensByQueryParamsTestPositive {
     softAssert.assertNotNull(response.data.getTokens());
     for (TokenQueryParamEnum token : new TokenQueryParamEnum[] {tokenQueryParamEnum1}) {
       tokenQueryParamEnumList.add(token);
-      System.out.println("tokenQueryParamEnumList");
-      System.out.println(tokenQueryParamEnumList);
     }
     for (Token field : response.getData().getTokens().getTokens()) {
       for (TokenQueryParamEnum list : tokenQueryParamEnumList) {
-        System.out.println("assert list");
-        System.out.println(list);
         TokensCommonHelper.assertToken(field, list);
       }
     }
@@ -112,8 +108,8 @@ public class GetTokensByQueryParamsTestPositive {
         TokensCommonHelper.assertToken(field, list);
       }
     }
-    tokenQueryParamEnumList.removeAll(tokenQueryParamEnumList);
     softAssert.assertAll();
+    tokenQueryParamEnumList.removeAll(tokenQueryParamEnumList);
   }
 
   @Test(
@@ -237,7 +233,6 @@ public class GetTokensByQueryParamsTestPositive {
       for (TokenQueryParamEnum list : tokenQueryParamEnumList) {
         TokensCommonHelper.assertToken(field, list);
       }
-
     }
     tokenQueryParamEnumList.removeAll(tokenQueryParamEnumList);
     softAssert.assertAll();
