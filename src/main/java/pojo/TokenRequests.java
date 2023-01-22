@@ -34,7 +34,7 @@ public class TokenRequests {
   public static class Filter {
     private String chainId;
     private String type;
-    // private String address;
+    private String address;
     private String name;
     private String symbol;
   }
