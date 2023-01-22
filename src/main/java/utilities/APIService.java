@@ -1,6 +1,6 @@
 package utilities;
 
-import static constants.TokenResponseConstants.baseURI;
+import static constants.TokenRequestConstants.baseURI;
 import static io.restassured.RestAssured.given;
 
 import io.qameta.allure.restassured.AllureRestAssured;
