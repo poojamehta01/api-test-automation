@@ -11,783 +11,843 @@ public class TokenPositiveDataHelper {
     switch (m.getName()) {
       case "getTokensByOneParamTest":
         return new Object[][] {
-          {TokenEnum.ID},
-          {TokenEnum.CHAIN_ID},
-          {TokenEnum.NAME},
-          {TokenEnum.SYMBOL},
-          {TokenEnum.TYPE},
-          {TokenEnum.TOTAL_SUPPLY},
-          {TokenEnum.DECIMALS},
-          {TokenEnum.BASE_URI},
-          {TokenEnum.LAST_TRANSFER_TIMESTAMP},
-          {TokenEnum.LAST_TRANSFER_BLOCK},
-          {TokenEnum.LAST_TRANSFER_HASH},
-          {TokenEnum.CURRENT_HOLDER_COUNT},
-          {TokenEnum.TRANSFER_COUNT},
-          {TokenEnum.TOKEN_TRAITS},
-          {TokenEnum.TOKEN_BALANCE}
+          {TokenEnum.ID_ENUM},
+          {TokenEnum.CHAIN_ID_ENUM},
+          {TokenEnum.NAME_ENUM},
+          {TokenEnum.SYMBOL_ENUM},
+          {TokenEnum.TYPE_ENUM},
+          {TokenEnum.TOTAL_SUPPLY_ENUM},
+          {TokenEnum.DECIMALS_ENUM},
+          {TokenEnum.BASE_URI_ENUM},
+          {TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM},
+          {TokenEnum.LAST_TRANSFER_BLOCK_ENUM},
+          {TokenEnum.LAST_TRANSFER_HASH_ENUM},
+          {TokenEnum.CURRENT_HOLDER_COUNT_ENUM},
+          {TokenEnum.TRANSFER_COUNT_ENUM},
+          {TokenEnum.TOKEN_TRAITS_ENUM},
+          {TokenEnum.TOKEN_BALANCE_ENUM}
         };
 
       case "getTokensByTwoParamsTest":
         return new Object[][] {
-          {TokenEnum.ID, TokenEnum.CHAIN_ID},
-          {TokenEnum.ID, TokenEnum.NAME},
-          {TokenEnum.ID, TokenEnum.SYMBOL},
-          {TokenEnum.ID, TokenEnum.TYPE},
-          {TokenEnum.ID, TokenEnum.TOTAL_SUPPLY},
-          {TokenEnum.ID, TokenEnum.DECIMALS},
-          {TokenEnum.ID, TokenEnum.BASE_URI},
-          {TokenEnum.ID, TokenEnum.LAST_TRANSFER_TIMESTAMP},
-          {TokenEnum.ID, TokenEnum.LAST_TRANSFER_BLOCK},
-          {TokenEnum.ID, TokenEnum.LAST_TRANSFER_HASH},
-          {TokenEnum.ID, TokenEnum.CURRENT_HOLDER_COUNT},
-          {TokenEnum.ID, TokenEnum.TRANSFER_COUNT},
-          {TokenEnum.ID, TokenEnum.TOKEN_TRAITS},
-          {TokenEnum.ID, TokenEnum.TOKEN_BALANCE}
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.NAME_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.SYMBOL_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.TYPE_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.TOTAL_SUPPLY_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.DECIMALS_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.BASE_URI_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.LAST_TRANSFER_BLOCK_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.LAST_TRANSFER_HASH_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.CURRENT_HOLDER_COUNT_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.TRANSFER_COUNT_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.TOKEN_TRAITS_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.TOKEN_BALANCE_ENUM}
         };
 
       case "getTokensByThreeParamsTest":
         return new Object[][] {
           {
-            TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME,
+            TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.NAME_ENUM,
           },
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.SYMBOL},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.TYPE},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.TOTAL_SUPPLY},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.DECIMALS},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.BASE_URI},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.LAST_TRANSFER_TIMESTAMP},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.LAST_TRANSFER_BLOCK},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.LAST_TRANSFER_HASH},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.CURRENT_HOLDER_COUNT},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.TRANSFER_COUNT},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.TOKEN_TRAITS},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.TOKEN_BALANCE}
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.SYMBOL_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.TYPE_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.TOTAL_SUPPLY_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.DECIMALS_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.BASE_URI_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.LAST_TRANSFER_BLOCK_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.LAST_TRANSFER_HASH_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.CURRENT_HOLDER_COUNT_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.TRANSFER_COUNT_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.TOKEN_TRAITS_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.TOKEN_BALANCE_ENUM}
         };
 
       case "getTokensByFourParamsTest":
         return new Object[][] {
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.SYMBOL},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.TYPE},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.TOTAL_SUPPLY},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.DECIMALS},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.BASE_URI},
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.NAME_ENUM, TokenEnum.SYMBOL_ENUM},
+          {TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.NAME_ENUM, TokenEnum.TYPE_ENUM},
           {
-            TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.LAST_TRANSFER_TIMESTAMP,
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM
           },
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.LAST_TRANSFER_BLOCK},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.LAST_TRANSFER_HASH},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.CURRENT_HOLDER_COUNT},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.TRANSFER_COUNT},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.TOKEN_TRAITS},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.TOKEN_BALANCE}
+          {
+            TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.NAME_ENUM, TokenEnum.DECIMALS_ENUM
+          },
+          {
+            TokenEnum.ID_ENUM, TokenEnum.CHAIN_ID_ENUM, TokenEnum.NAME_ENUM, TokenEnum.BASE_URI_ENUM
+          },
+          {
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+          },
+          {
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM
+          },
+          {
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM
+          },
+          {
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM
+          },
+          {
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.TRANSFER_COUNT_ENUM
+          },
+          {
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.TOKEN_TRAITS_ENUM
+          },
+          {
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.TOKEN_BALANCE_ENUM
+          }
         };
 
       case "getTokensByFiveParamsTest":
         return new Object[][] {
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.SYMBOL, TokenEnum.TYPE},
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TOTAL_SUPPLY
-          },
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.SYMBOL, TokenEnum.DECIMALS},
-          {TokenEnum.ID, TokenEnum.CHAIN_ID, TokenEnum.NAME, TokenEnum.SYMBOL, TokenEnum.BASE_URI},
-          {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.LAST_TRANSFER_BLOCK
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.LAST_TRANSFER_HASH
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.DECIMALS_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.CURRENT_HOLDER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.BASE_URI_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TRANSFER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TOKEN_TRAITS
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TOKEN_BALANCE
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM
+          },
+          {
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM
+          },
+          {
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TRANSFER_COUNT_ENUM
+          },
+          {
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TOKEN_TRAITS_ENUM
+          },
+          {
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TOKEN_BALANCE_ENUM
           }
         };
 
       case "getTokensBySixParamsTest":
         return new Object[][] {
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.DECIMALS
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.DECIMALS_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.BASE_URI
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.BASE_URI_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.LAST_TRANSFER_BLOCK
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.LAST_TRANSFER_HASH
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.CURRENT_HOLDER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TRANSFER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TRANSFER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOKEN_TRAITS
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOKEN_TRAITS_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOKEN_BALANCE
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOKEN_BALANCE_ENUM
           }
         };
 
       case "getTokensBySevenParamsTest":
         return new Object[][] {
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.BASE_URI
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.BASE_URI_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.LAST_TRANSFER_BLOCK
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.LAST_TRANSFER_HASH
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.CURRENT_HOLDER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.TRANSFER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.TRANSFER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.TOKEN_TRAITS
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.TOKEN_TRAITS_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.TOKEN_BALANCE
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.TOKEN_BALANCE_ENUM
           }
         };
 
       case "getTokensByEightParamsTest":
         return new Object[][] {
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.LAST_TRANSFER_BLOCK
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.LAST_TRANSFER_HASH
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.CURRENT_HOLDER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.TRANSFER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.TRANSFER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.TOKEN_TRAITS
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.TOKEN_TRAITS_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.TOKEN_BALANCE
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.TOKEN_BALANCE_ENUM
           }
         };
 
       case "getTokensByNineParamsTest":
         return new Object[][] {
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_BLOCK
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_HASH
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.CURRENT_HOLDER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.TRANSFER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.TRANSFER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.TOKEN_TRAITS
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.TOKEN_TRAITS_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.TOKEN_BALANCE
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.TOKEN_BALANCE_ENUM
           }
         };
 
       case "getTokensByTenParamsTest":
         return new Object[][] {
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_HASH
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.CURRENT_HOLDER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.TRANSFER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.TRANSFER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.TOKEN_TRAITS
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.TOKEN_TRAITS_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.TOKEN_BALANCE
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.TOKEN_BALANCE_ENUM
           }
         };
 
       case "getTokensByElevenParamsTest":
         return new Object[][] {
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.LAST_TRANSFER_HASH
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.CURRENT_HOLDER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.TRANSFER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.TRANSFER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.TOKEN_TRAITS
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.TOKEN_TRAITS_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.TOKEN_BALANCE
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.TOKEN_BALANCE_ENUM
           }
         };
 
       case "getTokensByTwelveParamsTest":
         return new Object[][] {
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.LAST_TRANSFER_HASH,
-            TokenEnum.CURRENT_HOLDER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.LAST_TRANSFER_HASH,
-            TokenEnum.TRANSFER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM,
+            TokenEnum.TRANSFER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.LAST_TRANSFER_HASH,
-            TokenEnum.TOKEN_TRAITS
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM,
+            TokenEnum.TOKEN_TRAITS_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.LAST_TRANSFER_HASH,
-            TokenEnum.TOKEN_BALANCE
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM,
+            TokenEnum.TOKEN_BALANCE_ENUM
           }
         };
 
       case "getTokensByThirteenParamsTest":
         return new Object[][] {
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.LAST_TRANSFER_HASH,
-            TokenEnum.CURRENT_HOLDER_COUNT,
-            TokenEnum.TRANSFER_COUNT
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM,
+            TokenEnum.TRANSFER_COUNT_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.LAST_TRANSFER_HASH,
-            TokenEnum.CURRENT_HOLDER_COUNT,
-            TokenEnum.TOKEN_TRAITS
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM,
+            TokenEnum.TOKEN_TRAITS_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.LAST_TRANSFER_HASH,
-            TokenEnum.CURRENT_HOLDER_COUNT,
-            TokenEnum.TOKEN_BALANCE
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM,
+            TokenEnum.TOKEN_BALANCE_ENUM
           }
         };
 
       case "getTokensByFourteenParamsTest":
         return new Object[][] {
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.LAST_TRANSFER_HASH,
-            TokenEnum.CURRENT_HOLDER_COUNT,
-            TokenEnum.TRANSFER_COUNT,
-            TokenEnum.TOKEN_TRAITS
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM,
+            TokenEnum.TRANSFER_COUNT_ENUM,
+            TokenEnum.TOKEN_TRAITS_ENUM
           },
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.LAST_TRANSFER_HASH,
-            TokenEnum.CURRENT_HOLDER_COUNT,
-            TokenEnum.TRANSFER_COUNT,
-            TokenEnum.TOKEN_BALANCE
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM,
+            TokenEnum.TRANSFER_COUNT_ENUM,
+            TokenEnum.TOKEN_BALANCE_ENUM
           }
         };
 
       case "getTokensByFifteenParamsTest":
         return new Object[][] {
           {
-            TokenEnum.ID,
-            TokenEnum.CHAIN_ID,
-            TokenEnum.NAME,
-            TokenEnum.SYMBOL,
-            TokenEnum.TYPE,
-            TokenEnum.TOTAL_SUPPLY,
-            TokenEnum.DECIMALS,
-            TokenEnum.BASE_URI,
-            TokenEnum.LAST_TRANSFER_TIMESTAMP,
-            TokenEnum.LAST_TRANSFER_BLOCK,
-            TokenEnum.LAST_TRANSFER_HASH,
-            TokenEnum.CURRENT_HOLDER_COUNT,
-            TokenEnum.TRANSFER_COUNT,
-            TokenEnum.TOKEN_TRAITS,
-            TokenEnum.TOKEN_BALANCE
+            TokenEnum.ID_ENUM,
+            TokenEnum.CHAIN_ID_ENUM,
+            TokenEnum.NAME_ENUM,
+            TokenEnum.SYMBOL_ENUM,
+            TokenEnum.TYPE_ENUM,
+            TokenEnum.TOTAL_SUPPLY_ENUM,
+            TokenEnum.DECIMALS_ENUM,
+            TokenEnum.BASE_URI_ENUM,
+            TokenEnum.LAST_TRANSFER_TIMESTAMP_ENUM,
+            TokenEnum.LAST_TRANSFER_BLOCK_ENUM,
+            TokenEnum.LAST_TRANSFER_HASH_ENUM,
+            TokenEnum.CURRENT_HOLDER_COUNT_ENUM,
+            TokenEnum.TRANSFER_COUNT_ENUM,
+            TokenEnum.TOKEN_TRAITS_ENUM,
+            TokenEnum.TOKEN_BALANCE_ENUM
           }
         };
 

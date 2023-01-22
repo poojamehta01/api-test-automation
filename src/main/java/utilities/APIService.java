@@ -10,7 +10,6 @@ import pojo.TokenRequests;
 
 public class APIService {
 
-
   public static Response sendAPIRequest(TokenRequests tokenRequests, int statusCode) {
 
     Response response =
