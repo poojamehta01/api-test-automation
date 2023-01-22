@@ -8,44 +8,32 @@ package constants;
 
 public class TokenResponseConstants {
 
-  public static final String baseURI = "https://devapi.airstack.xyz/gql";
+  public static final String ID = "10x60e4d786628fea6478f785a6d7e704777c86a7c6";
 
-  public static final String ID = "100000000000045166c45af0fc6e4cf31d9e14b9a";
+  public static final String ADDRESS = "0x60e4d786628fea6478f785a6d7e704777c86a7c6";
 
   public static final String CHAINID = "1";
 
-  public static final String NAME = "TopBidder";
+  public static final String NAME = "MutantApeYachtClub";
 
-  public static final String SYMBOL = "BID";
+  public static final String SYMBOL = "MAYC";
 
-  public static final String TYPE = "TopBidder";
+  public static final String TYPE = "ERC721";
 
-  public static final String TOTALSUPPLY = "100000000000000000000000000";
+  public static final String TOTALSUPPLY = "19429";
 
-  public static final int DECIMALS = 18;
+  public static final int DECIMALS = 0;
 
   public static final String BASEURI = "";
 
-  public static final String LASTRANSFERTIMESTAMP = "2021-05-26T12:32:37Z";
+  public static final String LASTRANSFERTIMESTAMP = "2022-02-01T16:00:36Z";
 
-  public static final int LASTTRANSFERBLOCK = 12509952;
+  public static final int LASTTRANSFERBLOCK = 14121057;
 
   public static final String LASTTRANSFERHASH =
-      "50958f748353ece0565f1655073808a4227588dc28ec955cb698d02af189a9da";
+      "6a9703daf024b5687a98f643e30ec28f43efdbe2bd3fd2e4b944e863b1ef7cea";
   public static final int CURRENTACCOUNTHOLD = 0;
 
-  public static final int TRANSFERCOUNT = 6508;
-  public static final String TOKENTRAITS = null;
+  public static final int TRANSFERCOUNT = 98859;
   public static final String TOKENBALANCE = null;
-
-  public static final String ID_INCORRECT = "id1";
-  public static final String ID_CORRECT = "id";
-
-  public static final String CHAINID_INCORRECT = "chainId1";
-  public static final String CHAINID_CORRECT = "chainId";
-
-  public static final String INCORRECT_HTTP_METHOD_ERROR_STATUS_LINE = "HTTP/1.1 404 Not Found";
-  public static final String INCORRECT_CONTENT_TYPE_ERROR_STATUS_LINE = "HTTP/1.1 400 Bad Request";
-
-  public static final String INCORRECT_CONTENT_TYPE_ERROR_MSG = "transport not supported";
 }
