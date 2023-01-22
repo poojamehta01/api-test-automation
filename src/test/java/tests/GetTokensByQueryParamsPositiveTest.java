@@ -16,7 +16,7 @@ import pojo.TokenResponse;
 import pojo.TokenResponse.Token;
 import utilities.APIService;
 
-@Epic("Get Token")
+@Epic("Get Token Positive testcases")
 @Feature("Get Token based on input query parameters")
 public class GetTokensByQueryParamsPositiveTest {
   private static final Logger log =

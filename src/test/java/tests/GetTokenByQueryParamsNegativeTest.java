@@ -9,6 +9,8 @@ import static io.restassured.RestAssured.given;
 import enums.TokenErrorResponseEnums;
 import helpers.TokenQueryParamNegativeDataHelper;
 import helpers.TokensCommonHelper;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -20,6 +22,8 @@ import pojo.TokenErrorResponse;
 import pojo.TokenErrorResponse.Error;
 import utilities.APIService;
 
+@Epic("Get Token Negative testcases")
+@Feature("Get Token based on input query parameters")
 public class GetTokenByQueryParamsNegativeTest {
   private static final Logger log =
       LogManager.getLogger(GetTokensByQueryParamsPositiveTest.class.getName());
