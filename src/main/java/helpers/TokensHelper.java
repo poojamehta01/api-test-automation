@@ -1,5 +1,21 @@
 package helpers;
 
+import static constants.TokenResponseConstanta.BASEURI;
+import static constants.TokenResponseConstanta.CHAINID;
+import static constants.TokenResponseConstanta.CURRENTACCOUNTHOLD;
+import static constants.TokenResponseConstanta.DECIMALS;
+import static constants.TokenResponseConstanta.ID;
+import static constants.TokenResponseConstanta.LASTRANSFERTIMESTAMP;
+import static constants.TokenResponseConstanta.LASTTRANSFERBLOCK;
+import static constants.TokenResponseConstanta.LASTTRANSFERHASH;
+import static constants.TokenResponseConstanta.NAME;
+import static constants.TokenResponseConstanta.SYMBOL;
+import static constants.TokenResponseConstanta.TOKENBALANCE;
+import static constants.TokenResponseConstanta.TOKENTRAITS;
+import static constants.TokenResponseConstanta.TOTALSUPPLY;
+import static constants.TokenResponseConstanta.TRANSFERCOUNT;
+import static constants.TokenResponseConstanta.TYPE;
+
 import enums.TokenEnum;
 import org.testng.asserts.SoftAssert;
 import pojo.TokenRequests;
@@ -31,6 +47,7 @@ public class TokensHelper {
             + "   }\n"
             + "  }\n"
             + " }";
+
     tokenRequests = TokenRequests.builder().query(query).variables(queryVariables).build();
     System.out.println(tokenRequests);
 
@@ -42,6 +59,7 @@ public class TokensHelper {
     switch (tokenEnumParam) {
       case id:
         softAssert.assertNotNull(field.getId());
+
         break;
       case chainId:
         softAssert.assertNotNull(field.getChainId());
@@ -87,5 +105,28 @@ public class TokensHelper {
         softAssert.assertNull(field.getTokenBalance());
         break;
     }
+  }
+
+  public static void assertTokenFieldValues(Token field){
+    SoftAssert softAssert = new SoftAssert();
+    softAssert.assertEquals(field.getId(),ID);
+    softAssert.assertEquals(field.getChainId(),CHAINID);
+    softAssert.assertEquals(field.getName(),NAME);
+    softAssert.assertEquals(field.getSymbol(),SYMBOL);
+    softAssert.assertEquals(field.getType(),TYPE);
+    softAssert.assertEquals(field.getTotalSupply(),TOTALSUPPLY);
+    softAssert.assertEquals(field.getDecimals(),DECIMALS);
+    softAssert.assertEquals(field.getBaseURI(),BASEURI);
+    softAssert.assertEquals(field.getLastTransferTimestamp(),LASTRANSFERTIMESTAMP);
+    softAssert.assertEquals(field.getLastTransferBlock(),LASTTRANSFERBLOCK);
+    softAssert.assertEquals(field.getLastTransferHash(),LASTTRANSFERHASH);
+    softAssert.assertEquals(field.getCurrentHolderCount(),CURRENTACCOUNTHOLD);
+    softAssert.assertEquals(field.getTransferCount(),TRANSFERCOUNT);
+    softAssert.assertEquals(field.getTokenTraits(),TOKENTRAITS);
+    softAssert.assertEquals(field.getTokenBalance(),TOKENBALANCE);
+
+
+
+
   }
 }

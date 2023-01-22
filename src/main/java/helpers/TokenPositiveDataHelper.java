@@ -4,7 +4,7 @@ import enums.TokenEnum;
 import java.lang.reflect.Method;
 import org.testng.annotations.DataProvider;
 
-public class TokenDataHelper {
+public class TokenPositiveDataHelper {
   @DataProvider(name = "token_dataProvider")
   public static Object[][] token_dataProvider(Method m) {
 

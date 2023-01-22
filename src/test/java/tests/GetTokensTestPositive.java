@@ -1,7 +1,9 @@
 package tests;
 
+import static constants.TokenResponseConstanta.ID;
+
 import enums.TokenEnum;
-import helpers.TokenDataHelper;
+import helpers.TokenPositiveDataHelper;
 import helpers.TokensHelper;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -16,13 +18,13 @@ import utilities.APIService;
 
 @Epic("Get Token")
 @Feature("Get Token based on input parameters")
-public class TokensTest {
-  private static final Logger log = LogManager.getLogger(TokensTest.class.getName());
+public class GetTokensTestPositive {
+  private static final Logger log = LogManager.getLogger(GetTokensTestPositive.class.getName());
 
   @Test(
       description = "Single parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByOneParamTest(TokenEnum tokenEnum1) {
     Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnum1.getValue()));
     log.info("The status code is: " + res.getStatusCode());
@@ -39,10 +41,10 @@ public class TokensTest {
   @Test(
       description = "Two parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByTwoParamsTest(TokenEnum tokenEnum1, TokenEnum tokenEnum2) {
     String tokenEnumNew = tokenEnum1.getValue() + tokenEnum2.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -59,11 +61,11 @@ public class TokensTest {
   @Test(
       description = "Three parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByThreeParamsTest(
       TokenEnum tokenEnum1, TokenEnum tokenEnum2, TokenEnum tokenEnum3) {
     String tokenEnumNew = tokenEnum1.getValue() + tokenEnum2.getValue() + tokenEnum3.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -81,7 +83,7 @@ public class TokensTest {
   @Test(
       description = "Four parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByFourParamsTest(
       TokenEnum tokenEnum1, TokenEnum tokenEnum2, TokenEnum tokenEnum3, TokenEnum tokenEnum4) {
     String tokenEnumNew =
@@ -89,7 +91,7 @@ public class TokensTest {
             + tokenEnum2.getValue()
             + tokenEnum3.getValue()
             + tokenEnum4.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -108,7 +110,7 @@ public class TokensTest {
   @Test(
       description = "Five parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByFiveParamsTest(
       TokenEnum tokenEnum1,
       TokenEnum tokenEnum2,
@@ -121,7 +123,7 @@ public class TokensTest {
             + tokenEnum3.getValue()
             + tokenEnum4.getValue()
             + tokenEnum5.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -141,7 +143,7 @@ public class TokensTest {
   @Test(
       description = "Six parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensBySixParamsTest(
       TokenEnum tokenEnum1,
       TokenEnum tokenEnum2,
@@ -156,7 +158,7 @@ public class TokensTest {
             + tokenEnum4.getValue()
             + tokenEnum5.getValue()
             + tokenEnum6.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -177,7 +179,7 @@ public class TokensTest {
   @Test(
       description = "Seven parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensBySevenParamsTest(
       TokenEnum tokenEnum1,
       TokenEnum tokenEnum2,
@@ -194,7 +196,7 @@ public class TokensTest {
             + tokenEnum5.getValue()
             + tokenEnum6.getValue()
             + tokenEnum7.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -216,7 +218,7 @@ public class TokensTest {
   @Test(
       description = "Eight parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByEightParamsTest(
       TokenEnum tokenEnum1,
       TokenEnum tokenEnum2,
@@ -235,7 +237,7 @@ public class TokensTest {
             + tokenEnum6.getValue()
             + tokenEnum7.getValue()
             + tokenEnum8.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -258,7 +260,7 @@ public class TokensTest {
   @Test(
       description = "Nine parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByNineParamsTest(
       TokenEnum tokenEnum1,
       TokenEnum tokenEnum2,
@@ -279,7 +281,7 @@ public class TokensTest {
             + tokenEnum7.getValue()
             + tokenEnum8.getValue()
             + tokenEnum9.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
     SoftAssert softAssert = new SoftAssert();
@@ -303,7 +305,7 @@ public class TokensTest {
   @Test(
       description = "Ten parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByTenParamsTest(
       TokenEnum tokenEnum1,
       TokenEnum tokenEnum2,
@@ -326,7 +328,7 @@ public class TokensTest {
             + tokenEnum8.getValue()
             + tokenEnum9.getValue()
             + tokenEnum10.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
 
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
@@ -352,7 +354,7 @@ public class TokensTest {
   @Test(
       description = "Eleven parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByElevenParamsTest(
       TokenEnum tokenEnum1,
       TokenEnum tokenEnum2,
@@ -377,7 +379,7 @@ public class TokensTest {
             + tokenEnum9.getValue()
             + tokenEnum10.getValue()
             + tokenEnum11.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
 
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
@@ -404,7 +406,7 @@ public class TokensTest {
   @Test(
       description = "Twelve parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByTwelveParamsTest(
       TokenEnum tokenEnum1,
       TokenEnum tokenEnum2,
@@ -431,7 +433,7 @@ public class TokensTest {
             + tokenEnum10.getValue()
             + tokenEnum11.getValue()
             + tokenEnum12.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
 
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
@@ -459,7 +461,7 @@ public class TokensTest {
   @Test(
       description = "Thirteen parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByThirteenParamsTest(
       TokenEnum tokenEnum1,
       TokenEnum tokenEnum2,
@@ -488,7 +490,7 @@ public class TokensTest {
             + tokenEnum11.getValue()
             + tokenEnum12.getValue()
             + tokenEnum13.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
 
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
@@ -517,7 +519,7 @@ public class TokensTest {
   @Test(
       description = "Fourteen parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByFourteenParamsTest(
       TokenEnum tokenEnum1,
       TokenEnum tokenEnum2,
@@ -548,7 +550,7 @@ public class TokensTest {
             + tokenEnum12.getValue()
             + tokenEnum13.getValue()
             + tokenEnum14.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
 
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
@@ -578,7 +580,7 @@ public class TokensTest {
   @Test(
       description = "Fifteen parameter",
       dataProvider = "token_dataProvider",
-      dataProviderClass = TokenDataHelper.class)
+      dataProviderClass = TokenPositiveDataHelper.class)
   public void getTokensByFifteenParamsTest(
       TokenEnum tokenEnum1,
       TokenEnum tokenEnum2,
@@ -611,7 +613,7 @@ public class TokensTest {
             + tokenEnum13.getValue()
             + tokenEnum14.getValue()
             + tokenEnum15.getValue();
-    Response res = APIService.sendAPIRequest(TokensHelper.getTokens(tokenEnumNew));
+    Response res = APIService.sendAPIRequest(TokensHelper.getTokens((tokenEnumNew)));
 
     log.info("The status code is: " + res.getStatusCode());
     TokenResponse response = res.as(TokenResponse.class);
@@ -635,6 +637,7 @@ public class TokensTest {
       TokensHelper.assertToken(field, tokenEnum13);
       TokensHelper.assertToken(field, tokenEnum14);
       TokensHelper.assertToken(field, tokenEnum15);
+      TokensHelper.assertTokenFieldValues(field);
     }
     softAssert.assertAll();
   }
