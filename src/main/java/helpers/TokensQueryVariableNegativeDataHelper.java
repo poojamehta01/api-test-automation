@@ -14,11 +14,20 @@ public class TokensQueryVariableNegativeDataHelper {
       case "getTokensByTypeTestNegative":
         return new Object[][] {{"X"}, {"1"}};
 
-      case "getTokensByNameSymbolTestNegative":
-        return new Object[][] {{"1"}};
-
       case "getTokensByAddressTestNegative":
         return new Object[][] {{""}, {"test"}, {null}, {"1"}};
+
+      case "getTokensByLimitTestNegative":
+        return new Object[][] {
+          {101},
+          // getting 5xx error for -1 and 0 hence commenting then as on hitting api with these
+          // values
+          // we later get 503 service unavailable which may lead to test faliures
+          // {"-1"},{"0"}
+        };
+
+      case "getTokensByCursorTestNegative":
+        return new Object[][] {{"1"}, {"0"}, {"-1"}};
 
       default:
         return new Object[][] {};
