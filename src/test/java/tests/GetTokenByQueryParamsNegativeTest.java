@@ -23,7 +23,7 @@ import pojo.TokenErrorResponse.Error;
 import utilities.APIService;
 
 @Epic("Get Token Negative testcases")
-@Feature("Get Token based on input query parameters")
+@Feature("Get Token based on invalid input query parameters")
 public class GetTokenByQueryParamsNegativeTest {
   private static final Logger log =
       LogManager.getLogger(GetTokenByQueryParamsNegativeTest.class.getName());

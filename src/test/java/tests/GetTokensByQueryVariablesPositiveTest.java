@@ -20,7 +20,7 @@ import pojo.TokenResponse;
 import utilities.APIService;
 
 @Epic("Get Token Positive testcases")
-@Feature("Get Token based on input query variables")
+@Feature("Get Token based on valid input query variables")
 public class GetTokensByQueryVariablesPositiveTest {
 
   private static Input input;

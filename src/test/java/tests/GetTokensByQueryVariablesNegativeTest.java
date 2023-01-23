@@ -27,7 +27,7 @@ import pojo.TokenResponse;
 import utilities.APIService;
 
 @Epic("Get Token Negative testcases")
-@Feature("Get Token based on input query variables")
+@Feature("Get Token based on invalid input query variables")
 public class GetTokensByQueryVariablesNegativeTest {
   private static Input input;
   private static Filter filter;
