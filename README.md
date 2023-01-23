@@ -4,9 +4,10 @@
 - [Installation & Run](#installation)
     - [Quick Start](#quick-start)
     - [Note](#note)
+- [Testcases](#Testcases)
 - [Useful information](#useful-information)
     - [Project Structure](#project-stracture)
-    - [Links](#links) 
+    - [Links](#links)
 
 ## <a name="installation"></a>Installation & Run
 ### <a name="quick-start"></a>Quick Start for Mac User
@@ -34,6 +35,8 @@ mvn spotless:check
 **1. TO RUN ALLURE AND MAVEN:
 Make sure Java version = 11.0.16.1 and allure version = 2.20.1** <br>
 **2. SET  global variable JAVA_HOME in terminal.** <br>
+## <a name="#testcases"></a>Testcases
+[Token TestCases link](https://docs.google.com/spreadsheets/d/1IN46tcXhezuYC-zLRoicmxu0DQ4qO5HF003QcdfsxYg/edit#gid=1301695409)
 
 ## <a name="useful-information"></a>Useful information
 ### <a name="project-stracture"></a>Project Structure
