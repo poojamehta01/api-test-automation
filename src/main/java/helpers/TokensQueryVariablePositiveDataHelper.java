@@ -15,10 +15,10 @@ public class TokensQueryVariablePositiveDataHelper {
 
       case "getTokenByTypeTest":
         return new Object[][] {
-          {"ERC721", ADDRESS_DEFAULT},
-          {"ERC20", "100000000000045166c45af0fc6e4cf31d9e14b9a"},
-          {"", ADDRESS_DEFAULT},
-          {null, ADDRESS_DEFAULT}
+          {"ERC721"},
+          {"ERC20"},
+          {""},
+          {null}
         };
 
       case "getTokenByNameTest":
