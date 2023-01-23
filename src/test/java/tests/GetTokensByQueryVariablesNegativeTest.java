@@ -1,8 +1,10 @@
 package tests;
 
 import static constants.TokenRequestConstants.ADDRESS_DEFAULT;
+import static constants.TokenRequestConstants.CHAIN_ID_DEFAULT;
 import static constants.TokenRequestConstants.CURSOR_DEFAULT;
 import static constants.TokenRequestConstants.LIMIT_DEFAULT;
+import static enums.TokenErrorResponseEnums.ADDRESS_INCORRECT;
 import static enums.TokenErrorResponseEnums.CHAIN_ID_NULL;
 
 import helpers.TokensCommonHelper;
@@ -16,6 +18,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pojo.TokenErrorResponse;
 import pojo.TokenErrorResponse.Error;
+import pojo.TokenErrorResponse1;
 import pojo.TokenRequests.Filter;
 import pojo.TokenRequests.Input;
 import pojo.TokenResponse;
@@ -31,10 +34,10 @@ public class GetTokensByQueryVariablesNegativeTest {
       LogManager.getLogger(GetTokensByQueryVariablesNegativeTest.class.getName());
 
   @Test(
-      description = "Single query variable",
+      description = "Get token by chainId Invalid input",
       dataProvider = "token_dataProvider",
       dataProviderClass = TokensQueryVariableNegativeDataHelper.class)
-  public void getTokensByChainIdNot1TestNegative(String chainId) {
+  public void getTokensByChainIdTestNegative(String chainId) {
     filter =
         Filter.builder()
             .chainId(chainId)
@@ -55,7 +58,7 @@ public class GetTokensByQueryVariablesNegativeTest {
     softAssert.assertAll();
   }
 
-  @Test(description = "Single query variable")
+  @Test(description = "Get token by chainId null Invalid input")
   public void getTokensByChainIdNullTestNegative() {
     filter =
         Filter.builder()
@@ -79,6 +82,36 @@ public class GetTokensByQueryVariablesNegativeTest {
     for (Error error : response.errors) {
       softAssert.assertEquals(error.getMessage(), CHAIN_ID_NULL.getMessage());
       softAssert.assertEquals(error.getExtensions().getCode(), CHAIN_ID_NULL.getCode());
+    }
+    softAssert.assertAll();
+  }
+
+  @Test(
+      description = "Get token by address Invalid input",
+      dataProvider = "token_dataProvider",
+      dataProviderClass = TokensQueryVariableNegativeDataHelper.class)
+  public void getTokensByAddressTestNegative(String address) {
+    filter =
+        Filter.builder()
+            .chainId(CHAIN_ID_DEFAULT)
+            .type("")
+            .name("")
+            .symbol("")
+            .address(address)
+            .build();
+    input = Input.builder().filter(filter).cursor(CURSOR_DEFAULT).limit(LIMIT_DEFAULT).build();
+
+    Response res =
+        APIService.sendAPIRequest(TokensCommonHelper.getTokensByQueryVariable(input), 200);
+    log.info("The status code is: " + res.getStatusCode());
+
+    SoftAssert softAssert = new SoftAssert();
+    TokenErrorResponse1 response = res.as(TokenErrorResponse1.class);
+    softAssert.assertNotNull(response.getErrors());
+    softAssert.assertEquals(res.getStatusCode(), ADDRESS_INCORRECT.getStatus());
+    for (TokenErrorResponse1.Error error : response.errors) {
+      softAssert.assertEquals(error.getMessage(), ADDRESS_INCORRECT.getMessage());
+      softAssert.assertEquals(error.getExtensions().getCode(), ADDRESS_INCORRECT.getCode());
     }
     softAssert.assertAll();
   }
