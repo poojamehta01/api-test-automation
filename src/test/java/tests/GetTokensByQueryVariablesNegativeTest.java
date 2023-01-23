@@ -6,6 +6,8 @@ import static constants.TokenRequestConstants.CURSOR_DEFAULT;
 import static constants.TokenRequestConstants.LIMIT_DEFAULT;
 import static enums.TokenErrorResponseEnums.ADDRESS_INCORRECT;
 import static enums.TokenErrorResponseEnums.CHAIN_ID_NULL;
+import static enums.TokenErrorResponseEnums.CURSOR_INCORRECT;
+import static enums.TokenErrorResponseEnums.LIMIT_INCORRECT;
 
 import helpers.TokensCommonHelper;
 import helpers.TokensQueryVariableNegativeDataHelper;
@@ -112,6 +114,70 @@ public class GetTokensByQueryVariablesNegativeTest {
     for (TokenAddressErrorResponse.Error error : response.errors) {
       softAssert.assertEquals(error.getMessage(), ADDRESS_INCORRECT.getMessage());
       softAssert.assertEquals(error.getExtensions().getCode(), ADDRESS_INCORRECT.getCode());
+    }
+    softAssert.assertAll();
+  }
+
+  @Test(
+      description = "Get token by token Invalid input",
+      dataProvider = "token_dataProvider",
+      dataProviderClass = TokensQueryVariableNegativeDataHelper.class)
+  public void getTokensByTypeTestNegative(String type) {
+    filter = Filter.builder().chainId(CHAIN_ID_DEFAULT).type(type).name("").symbol("").build();
+    input = Input.builder().filter(filter).cursor(CURSOR_DEFAULT).limit(LIMIT_DEFAULT).build();
+
+    Response res =
+        APIService.sendAPIRequest(TokensCommonHelper.getTokensByQueryVariable(input), 200);
+    log.info("The status code is: " + res.getStatusCode());
+
+    SoftAssert softAssert = new SoftAssert();
+    TokenResponse response = res.as(TokenResponse.class);
+    softAssert.assertNull(response.getData().getTokens().getTokens());
+    softAssert.assertAll();
+  }
+
+  @Test(
+      description = "Get token by limit invalid input",
+      dataProvider = "token_dataProvider",
+      dataProviderClass = TokensQueryVariableNegativeDataHelper.class)
+  public void getTokensByLimitTestNegative(int limit) {
+    filter = Filter.builder().chainId(CHAIN_ID_DEFAULT).type("").name("").symbol("").build();
+    input = Input.builder().filter(filter).cursor(CURSOR_DEFAULT).limit(limit).build();
+
+    Response res =
+        APIService.sendAPIRequest(TokensCommonHelper.getTokensByQueryVariable(input), 200);
+    log.info("The status code is: " + res.getStatusCode());
+
+    SoftAssert softAssert = new SoftAssert();
+    TokenAddressErrorResponse response = res.as(TokenAddressErrorResponse.class);
+    softAssert.assertNotNull(response.getErrors());
+    softAssert.assertEquals(res.getStatusCode(), LIMIT_INCORRECT.getStatus());
+    for (TokenAddressErrorResponse.Error error : response.errors) {
+      softAssert.assertEquals(error.getMessage(), LIMIT_INCORRECT.getMessage());
+      softAssert.assertEquals(error.getExtensions().getCode(), LIMIT_INCORRECT.getCode());
+    }
+    softAssert.assertAll();
+  }
+
+  @Test(
+      description = "Get token by cursor Invalid input",
+      dataProvider = "token_dataProvider",
+      dataProviderClass = TokensQueryVariableNegativeDataHelper.class)
+  public void getTokensByCursorTestNegative(String cursor) {
+    filter = Filter.builder().chainId(CHAIN_ID_DEFAULT).type("").name("").symbol("").build();
+    input = Input.builder().filter(filter).cursor(cursor).limit(LIMIT_DEFAULT).build();
+
+    Response res =
+        APIService.sendAPIRequest(TokensCommonHelper.getTokensByQueryVariable(input), 200);
+    log.info("The status code is: " + res.getStatusCode());
+
+    SoftAssert softAssert = new SoftAssert();
+    TokenAddressErrorResponse response = res.as(TokenAddressErrorResponse.class);
+    softAssert.assertNotNull(response.getErrors());
+    softAssert.assertEquals(res.getStatusCode(), CURSOR_INCORRECT.getStatus());
+    for (TokenAddressErrorResponse.Error error : response.errors) {
+      softAssert.assertEquals(error.getMessage(), CURSOR_INCORRECT.getMessage());
+      softAssert.assertEquals(error.getExtensions().getCode(), CURSOR_INCORRECT.getCode());
     }
     softAssert.assertAll();
   }
