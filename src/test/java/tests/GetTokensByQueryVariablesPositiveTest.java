@@ -59,13 +59,7 @@ public class GetTokensByQueryVariablesPositiveTest {
       dataProvider = "token_dataProvider",
       dataProviderClass = TokensQueryVariablePositiveDataHelper.class)
   public void getTokenByTypeTest(String type) {
-    filter =
-        Filter.builder()
-            .chainId(CHAIN_ID_DEFAULT)
-            .type(type)
-            .name("")
-            .symbol("")
-            .build();
+    filter = Filter.builder().chainId(CHAIN_ID_DEFAULT).type(type).name("").symbol("").build();
     input = Input.builder().filter(filter).cursor(CURSOR_DEFAULT).limit(LIMIT_DEFAULT).build();
 
     Response res =
