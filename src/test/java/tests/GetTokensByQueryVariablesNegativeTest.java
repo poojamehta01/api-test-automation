@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pojo.TokenErrorResponse;
 import pojo.TokenErrorResponse.Error;
-import pojo.TokenErrorResponse1;
+import pojo.TokenAddressErrorResponse;
 import pojo.TokenRequests.Filter;
 import pojo.TokenRequests.Input;
 import pojo.TokenResponse;
@@ -106,10 +106,10 @@ public class GetTokensByQueryVariablesNegativeTest {
     log.info("The status code is: " + res.getStatusCode());
 
     SoftAssert softAssert = new SoftAssert();
-    TokenErrorResponse1 response = res.as(TokenErrorResponse1.class);
+    TokenAddressErrorResponse response = res.as(TokenAddressErrorResponse.class);
     softAssert.assertNotNull(response.getErrors());
     softAssert.assertEquals(res.getStatusCode(), ADDRESS_INCORRECT.getStatus());
-    for (TokenErrorResponse1.Error error : response.errors) {
+    for (TokenAddressErrorResponse.Error error : response.errors) {
       softAssert.assertEquals(error.getMessage(), ADDRESS_INCORRECT.getMessage());
       softAssert.assertEquals(error.getExtensions().getCode(), ADDRESS_INCORRECT.getCode());
     }
