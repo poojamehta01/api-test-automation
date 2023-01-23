@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="api-test-automation" target="1.7" />
+      <module name="api-test-automation" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
