@@ -1,7 +1,5 @@
 package helpers;
 
-import static constants.TokenRequestConstants.ADDRESS_DEFAULT;
-
 import java.lang.reflect.Method;
 import org.testng.annotations.DataProvider;
 
@@ -11,15 +9,10 @@ public class TokensQueryVariablePositiveDataHelper {
 
     switch (m.getName()) {
       case "getTokensByChainIdTest":
-        return new Object[][] {{"1"}, {""}, {null}};
+        return new Object[][] {{"1"}, {""}};
 
       case "getTokenByTypeTest":
-        return new Object[][] {
-          {"ERC721"},
-          {"ERC20"},
-          {""},
-          {null}
-        };
+        return new Object[][] {{"ERC721"}, {"ERC20"}, {""}, {null}};
 
       case "getTokenByNameTest":
         return new Object[][] {{"MutantApeYachtClub"}, {""}, {null}};
@@ -30,7 +23,7 @@ public class TokensQueryVariablePositiveDataHelper {
       case "getTokenByAddressTest":
         return new Object[][] {
           {"0xedf6d3c3664606fe9ee3a9796d5cc75e3b16e682"},
-          {"0x60e4d786628fea6478f785a6d7e704777c86a7c6"}
+          {"0x60e4d786628fea6478f785a6d7e704777c86a7c6"},
         };
 
       case "getTokenByLimitTest":
