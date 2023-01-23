@@ -38,6 +38,8 @@ Make sure Java version = 11.0.16.1 and allure version = 2.20.1** <br>
 ## <a name="#testcases"></a>Testcases
 [Token TestCases link](https://docs.google.com/spreadsheets/d/1IN46tcXhezuYC-zLRoicmxu0DQ4qO5HF003QcdfsxYg/edit#gid=1301695409)
 
+[Bugs link](https://docs.google.com/document/d/1VrQy9pweRhBsNvt7qHxfxrwZvq2yBVWcYegM33OFraI/edit)
+
 ## <a name="useful-information"></a>Useful information
 ### <a name="project-stracture"></a>Project Structure
 
