@@ -58,14 +58,13 @@ public class GetTokensByQueryVariablesPositiveTest {
       description = "Get token by type valid input",
       dataProvider = "token_dataProvider",
       dataProviderClass = TokensQueryVariablePositiveDataHelper.class)
-  public void getTokenByTypeTest(String type, String address) {
+  public void getTokenByTypeTest(String type) {
     filter =
         Filter.builder()
             .chainId(CHAIN_ID_DEFAULT)
             .type(type)
             .name("")
             .symbol("")
-            .address(address)
             .build();
     input = Input.builder().filter(filter).cursor(CURSOR_DEFAULT).limit(LIMIT_DEFAULT).build();
 
