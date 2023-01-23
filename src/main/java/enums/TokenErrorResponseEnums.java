@@ -24,8 +24,9 @@ public enum TokenErrorResponseEnums {
   GET_TOKEN_QUERY_INVALID_NOT_PRESENT_FIELD_STRING(
       "Expected Name, found String", "GRAPHQL_PARSE_FAILED", null, 422),
 
-  CHAIN_ID_NULL("cannot be null", "GRAPHQL_VALIDATION_FAILED", null, 422);
+  CHAIN_ID_NULL("cannot be null", "GRAPHQL_VALIDATION_FAILED", null, 422),
 
+  ADDRESS_INCORRECT("Invalid Ethereum address", "ERROR_AT_001", "{Tokens=null}", 200);
   @Getter private final String message;
   @Getter private final String code;
   @Getter private final String data;
