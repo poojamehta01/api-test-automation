@@ -26,7 +26,11 @@ public enum TokenErrorResponseEnums {
 
   CHAIN_ID_NULL("cannot be null", "GRAPHQL_VALIDATION_FAILED", null, 422),
 
-  ADDRESS_INCORRECT("Invalid Ethereum address", "ERROR_AT_001", "{Tokens=null}", 200);
+  ADDRESS_INCORRECT("Invalid Ethereum address", "ERROR_AT_001", "{Tokens=null}", 200),
+
+  LIMIT_INCORRECT("Invalid ChainID", "ERROR_AT_004", "{Tokens=null}", 200),
+
+  CURSOR_INCORRECT("Internal Server Error", "ERROR_008", "{Tokens=null}", 200);
   @Getter private final String message;
   @Getter private final String code;
   @Getter private final String data;
