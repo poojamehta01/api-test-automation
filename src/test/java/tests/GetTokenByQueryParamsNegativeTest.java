@@ -26,7 +26,7 @@ import utilities.APIService;
 @Feature("Get Token based on input query parameters")
 public class GetTokenByQueryParamsNegativeTest {
   private static final Logger log =
-      LogManager.getLogger(GetTokensByQueryParamsPositiveTest.class.getName());
+      LogManager.getLogger(GetTokenByQueryParamsNegativeTest.class.getName());
 
   @Test(
       description = "No parameter",
