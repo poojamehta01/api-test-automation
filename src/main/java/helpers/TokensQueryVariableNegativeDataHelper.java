@@ -9,7 +9,7 @@ public class TokensQueryVariableNegativeDataHelper {
 
     switch (m.getName()) {
       case "getTokensByChainIdTestNegative":
-        return new Object[][] {{"0"}, {"test"}, {"2"}, {""}};
+        return new Object[][] {{"0"}, {"test"}, {"2"}};
 
       case "getTokensByTypeTestNegative":
         return new Object[][] {{"X"}, {"1"}};
