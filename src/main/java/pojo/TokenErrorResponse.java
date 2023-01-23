@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import lombok.Data;
 
 @Data
+@JsonIgnoreProperties
 public class TokenErrorResponse {
   public ArrayList<Error> errors;
   public Object data;
@@ -19,11 +20,13 @@ public class TokenErrorResponse {
   }
 
   @Data
+  @JsonIgnoreProperties
   public static class Extensions {
     public String code;
   }
 
   @Data
+  @JsonIgnoreProperties
   public static class Location {
     public int line;
     public int column;
